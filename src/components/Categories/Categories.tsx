@@ -17,7 +17,7 @@ const Categories = ({ categories }) => {
 
   return (
     <div className="text-right">
-      <label htmlFor="allCategories">All Categories: </label>
+      <label htmlFor="allCategories">Select Category: </label>
       <Form.Select id="allCategories" onChange={handleChange}>
         <option>All Categories</option>
         {categories.map((item, index) => (

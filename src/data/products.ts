@@ -4,7 +4,7 @@ const products = [
     name: 'Product 1',
     price: 499.99,
     currency: 'EGP',
-    image: 'images/01.jpg',
+    image: 'https://picsum.photos/400',
     CategoryTypeID: 1,
   },
   {
@@ -12,7 +12,7 @@ const products = [
     name: 'Product 2',
     price: 249.99,
     currency: 'EGP',
-    image: 'images/02.jpg',
+    image: 'https://picsum.photos/400',
     CategoryTypeID: 1,
   },
   {
@@ -20,7 +20,7 @@ const products = [
     name: 'Product 4',
     price: 239.99,
     currency: 'EGP',
-    image: 'images/04.jpg',
+    image: 'https://picsum.photos/400',
     CategoryTypeID: 2,
   },
   {
@@ -28,7 +28,7 @@ const products = [
     name: 'Product 6',
     price: 119.99,
     currency: 'EGP',
-    image: 'images/06.jpg',
+    image: 'https://picsum.photos/400',
     CategoryTypeID: 4,
   },
   {
@@ -36,7 +36,7 @@ const products = [
     name: 'Product 5',
     price: 599.99,
     currency: 'EGP',
-    image: 'images/05.jpg',
+    image: 'https://picsum.photos/400',
     CategoryTypeID: 5,
   },
   {
@@ -44,7 +44,7 @@ const products = [
     name: 'Product 3',
     price: 149.99,
     currency: 'EGP',
-    image: 'images/03.jpg',
+    image: 'https://picsum.photos/400',
     CategoryTypeID: 6,
   }
 ];
