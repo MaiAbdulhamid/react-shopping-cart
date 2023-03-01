@@ -1,10 +1,10 @@
 import React from "react";
-import Categories from "./containers/Categories";
-import ProductList from "./containers/ProductList";
-import Footer from "./layout/Footer/Footer";
-import Header from "./layout/Header/Header";
+import Categories from "../containers/Categories";
+import ProductList from "../containers/ProductList";
+import Footer from "../layout/Footer";
+import Header from "../layout/Header";
 
-const App = () => {
+const Home = () => {
   return (
     <div className="container">
       <Header />
@@ -23,4 +23,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Home;

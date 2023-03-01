@@ -1,8 +1,5 @@
-import { getProduct } from "../ducks/products";
-
-// actions
-const CART_ADD = "cart/ADD";
-const CART_REMOVE = "cart/REMOVE";
+import { getProduct } from "./products";
+import {CART_ADD, CART_REMOVE} from "./types"
 
 // reducer
 const initialState = {
@@ -10,7 +7,7 @@ const initialState = {
   currency: "EGP",
 };
 
-export default function cart(state = initialState, action = {}) {
+export default function cart(state = initialState, action : any = {}) {
   switch (action.type) {
     case CART_ADD:
       return handleCartAdd(state, action.payload);

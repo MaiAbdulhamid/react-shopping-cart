@@ -1,4 +1,4 @@
-const data = [
+const products = [
   {
     id: 1,
     name: 'Product 1',
@@ -41,7 +41,7 @@ const data = [
   },
   {
     id: 3,
-    name: 'Sessel Anna',
+    name: 'Product 3',
     price: 149.99,
     currency: 'EGP',
     image: 'images/03.jpg',
@@ -49,4 +49,4 @@ const data = [
   }
 ];
 
-export default data;
+export default products;

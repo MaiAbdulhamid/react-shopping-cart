@@ -1,8 +1,8 @@
 import { connect } from "react-redux";
 import ProductList from "../components/ProductList";
-import { getProducts } from "../ducks/products";
+import { getProducts } from "../actions/products";
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state: any, props: any) => {
   return {
     products: getProducts(state, props),
   };

@@ -1,4 +1,4 @@
 import Cart from './Cart';
-import './Cart.css';
+import './style.tsx';
 
 export default Cart;

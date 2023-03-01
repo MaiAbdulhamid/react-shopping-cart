@@ -1,8 +1,9 @@
-import React from "react";
 import PropTypes from "prop-types";
 import CartItem from "./CartItem";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
+import { CartBody, CartTotal } from "./style";
+import { navigateTo } from "@mongez/react-router";
 
 export default function CartModal({
   open,
@@ -12,6 +13,9 @@ export default function CartModal({
   currency,
   removeFromCart,
 }) {
+  const handleSuccessPage = () => {
+    navigateTo("/success")
+  }
   return (
     <Modal show={open} onHide={onClose} animation={false}>
       <Modal.Body>
@@ -21,7 +25,7 @@ export default function CartModal({
           <div className="panel panel-default">
             <div className="panel-body">
               {items.length > 0 && (
-                <div className="cart__body">
+                <CartBody>
                   {items.map((item) => (
                     <CartItem
                       key={item.id}
@@ -29,20 +33,20 @@ export default function CartModal({
                       onClick={() => removeFromCart(item.id)}
                     />
                   ))}
-                </div>
+                </CartBody>
               )}
               {items.length === 0 && (
                 <div className="alert alert-info">Cart is empty</div>
               )}
-              <div className="cart__total">
+              <CartTotal>
                 Total: {total} {currency}
-              </div>
+              </CartTotal>
             </div>
           </div>
         </div>
         {items.length !== 0 && (
           <div>
-            <Button className="btn-primary" onClick={onClose}>Done</Button>
+            <Button className="btn-primary" onClick={handleSuccessPage}>Done</Button>
           </div>
         ) }
       </Modal.Body>

@@ -2,20 +2,22 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Button } from "react-bootstrap";
 import CartModal from "./CartModal";
-import "./Cart.css"
+import "./style.tsx"
+import { CartTotal } from "./style";
 
 const Cart = ({ items, total, currency, removeFromCart }) => {
   const [open, setOpen] = useState(false);
   const handleOpenModal = () => setOpen(true);
-  const handleCloseModal = () => {setOpen(false)};
-
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
   return (
     <>
       <div className="row cart__row">
         <div className="col-md-6">
-          <div className="cart__total">
+          <CartTotal>
             Total: {total} {currency}
-          </div>
+          </CartTotal>
         </div>
         <div className="col-md-6">
           <Button onClick={handleOpenModal}>Buy</Button>

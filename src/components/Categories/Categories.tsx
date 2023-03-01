@@ -1,20 +1,25 @@
-import React, { Component } from "react";
+import React from "react";
 import Form from "react-bootstrap/Form";
-//import categories from "../../data/categories";
 import PropTypes from "prop-types";
+import { categoryAtom } from "../../atoms/category-atoms";
+import products from "../../data/products";
 
-const Categories = ({ categories, chosenCategory }) => {
+const Categories = ({ categories }) => {
+
   const handleChange = (e) => {
-    chosenCategory(e.target.value)
+    const categoryId = Number(e.target.value);
+    categoryAtom.update({
+      category: categories.find(category => category.id === categoryId),
+      products: isNaN(categoryId) ? products : products.filter(product => product.CategoryTypeID === categoryId)
+    });
   };
 
-  console.log(chosenCategory)
 
   return (
     <div className="text-right">
       <label htmlFor="allCategories">All Categories: </label>
       <Form.Select id="allCategories" onChange={handleChange}>
-        <option>Open this select menu</option>
+        <option>All Categories</option>
         {categories.map((item, index) => (
           <option value={item.id}>{item.name}</option>
         ))}
